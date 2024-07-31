@@ -1,3 +1,13 @@
+--[[
+-----------------------------------------------------------
+                    Informations
+-----------------------------------------------------------
+Ce fichier provient du site web https://aide-serveur.fr/ et a été publié par Autorun__.
+Toute republication sur un site autre que https://aide-serveur.fr/ est autorisée uniquement avec l'accord préalable de Discord : autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Le créateur du serveur préconfiguré est Autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Toute revente est strictement interdite, car celui-ci est téléchargeable gratuitement sur https://aide-serveur.fr/.
+-----------------------------------------------------------
+--]]
 
 --[[
     PIXEL F4
@@ -15,8 +25,8 @@
 ]]
 
 PIXEL.F4.Config = {
-    MenuTitle = "PIXEL DarkRP",
-    SidebarLogo = "YCRtBVO",
+    MenuTitle = "Autorun", -- NOM DU SERVEUR
+    SidebarLogo = "M9sum9O", -- LOGO DU SERVEUR (UPLOAD L'IMAGE SUR : https://imgur.com/) EXEMPLE : https://i.imgur.com/M9sum9O.jpg PRENEZ UNIQUEMENT "M9sum9O"
     Announcement = false,
     WebsiteLinks = {
         [1] = {
@@ -25,13 +35,13 @@ PIXEL.F4.Config = {
             ImgurID = "HxsUUz2"
         },
         [2] = {
-            Name = "Rules",
+            Name = "Règlement",
             Link = "https://google.com",
             ImgurID = "0aWOlMI"
         },
         [3] = {
             Name = "Discord",
-            Link = "https://google.com",
+            Link = "https://discord.gg/GgH8eKmFpt",
             ImgurID = "EtvPE3C"
         },
         [4] = {
@@ -47,13 +57,13 @@ PIXEL.F4.Config = {
     },
     Commands = {
         {
-            Name = "Sell All Doors",
+            Name = "Vendre toutes les portes",
             Func = function()
                 RunConsoleCommand("say", "/sellalldoors")
             end
         },
         {
-            Name = "Drop Money",
+            Name = "Jeter de l'argent",
             Func = function()
                 PIXEL.F4.ToggleMenu()
                 Derma_StringRequest("Drop Money", "Drop an amount of money:", "100", function(txt)
@@ -62,7 +72,7 @@ PIXEL.F4.Config = {
             end
         },
         {
-            Name = "Change Name",
+            Name = "Changer de nom",
             Func = function()
                 PIXEL.F4.ToggleMenu()
                 Derma_StringRequest("Change Name", "Change your Roleplay name (Leave Blank for your Steam name):", LocalPlayer():Nick(), function(txt)
@@ -71,7 +81,7 @@ PIXEL.F4.Config = {
             end
         },
         {
-            Name = "Broadcast",
+            Name = "Diffusion",
             Func = function()
                 PIXEL.F4.ToggleMenu()
                 Derma_StringRequest("Change Name", "Change your Roleplay name (Leave Blank for your Steam name):", LocalPlayer():Nick(), function(txt)
@@ -94,7 +104,7 @@ PIXEL.F4.Config = {
 if SERVER then return end
 
 PIXEL.F4.Config.RankTags = {
-    [PIXEL.RankTags.VIP] = {"VIP", PIXEL.Colors.Gold},
+    [PIXEL.RankTags.VIP] = {"vip", PIXEL.Colors.Gold},
     [PIXEL.RankTags.VIP_PLUS] = {"VIP+", "rainbow"},
     [PIXEL.RankTags.STAFF] = {"Staff Only", PIXEL.Colors.Negative}
 }

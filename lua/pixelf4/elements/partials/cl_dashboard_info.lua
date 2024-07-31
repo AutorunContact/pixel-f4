@@ -1,3 +1,13 @@
+--[[
+-----------------------------------------------------------
+                    Informations
+-----------------------------------------------------------
+Ce fichier provient du site web https://aide-serveur.fr/ et a été publié par Autorun__.
+Toute republication sur un site autre que https://aide-serveur.fr/ est autorisée uniquement avec l'accord préalable de Discord : autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Le créateur du serveur préconfiguré est Autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Toute revente est strictement interdite, car celui-ci est téléchargeable gratuitement sur https://aide-serveur.fr/.
+-----------------------------------------------------------
+--]]
 
 --[[
     PIXEL F4
@@ -32,8 +42,8 @@ function PANEL:Init()
 	self.LeftCat = vgui.Create("PIXEL.ScrollPanel", self.LeftPnl)
 	self.RightCat = vgui.Create("PIXEL.ScrollPanel", self.RightPnl)
 
-	self.LeftPnl.Title = "Laws"
-	self.RightPnl.Title = "Commands"
+	self.LeftPnl.Title = "Lois"
+	self.RightPnl.Title = "Commandes"
 
 	local lawTableIsEmpty = (#DarkRP.getLaws()) == 0
 	function self.LeftPnl:Paint(w,h)

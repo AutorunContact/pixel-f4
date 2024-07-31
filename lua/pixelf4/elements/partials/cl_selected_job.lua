@@ -1,3 +1,13 @@
+--[[
+-----------------------------------------------------------
+                    Informations
+-----------------------------------------------------------
+Ce fichier provient du site web https://aide-serveur.fr/ et a été publié par Autorun__.
+Toute republication sur un site autre que https://aide-serveur.fr/ est autorisée uniquement avec l'accord préalable de Discord : autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Le créateur du serveur préconfiguré est Autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Toute revente est strictement interdite, car celui-ci est téléchargeable gratuitement sur https://aide-serveur.fr/.
+-----------------------------------------------------------
+--]]
 
 --[[
     PIXEL F4
@@ -205,14 +215,14 @@ function PANEL:SelectJob(jobData, teamNo)
     self:GenerateWeapons(jobData)
 
     self:SetName(jobData.name)
-    self:SetSalary("Salary: " .. PIXEL.FormatMoney(jobData.salary))
+    self:SetSalary("Salaire: " .. PIXEL.FormatMoney(jobData.salary))
     self:SetDescription(jobData.description)
     self:SetVote(jobData.vote)
     self:SetCommand(jobData.command)
     self:SetTeamNo(teamNo)
     self:SetRankTag(PIXEL.F4.Config.RankTags[jobData.rankTag])
 
-    self.BecomeBtn:SetText(jobData.vote and "Start Vote" or "Become")
+    self.BecomeBtn:SetText(jobData.vote and "Choisir" or "Choisir")
 
     if not (PIXEL.Tutorials and PIXEL.Tutorials[teamNo]) then
         self.TutorialBtn:Remove()

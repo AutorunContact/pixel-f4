@@ -1,3 +1,13 @@
+--[[
+-----------------------------------------------------------
+                    Informations
+-----------------------------------------------------------
+Ce fichier provient du site web https://aide-serveur.fr/ et a été publié par Autorun__.
+Toute republication sur un site autre que https://aide-serveur.fr/ est autorisée uniquement avec l'accord préalable de Discord : autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Le créateur du serveur préconfiguré est Autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Toute revente est strictement interdite, car celui-ci est téléchargeable gratuitement sur https://aide-serveur.fr/.
+-----------------------------------------------------------
+--]]
 
 --[[
     PIXEL F4
@@ -80,9 +90,9 @@ function PANEL:Init()
 
     self.Navbar = vgui.Create("PIXEL.Navbar", self)
     self.Navbar:Dock(TOP)
-    self.Navbar:AddItem("weapons", "Weapons", function() self:SelectCategory("weapons") end)
-    self.Navbar:AddItem("shipments", "Shipments", function() self:SelectCategory("shipments") end)
-    self.Navbar:AddItem("ammo", "Ammo", function() self:SelectCategory("ammo") end)
+    --self.Navbar:AddItem("weapons", "Armes", function() self:SelectCategory("weapons") end)
+    self.Navbar:AddItem("shipments", "Armes", function() self:SelectCategory("shipments") end)
+    --self.Navbar:AddItem("ammo", "Munitions", function() self:SelectCategory("ammo") end)
     self.Navbar:SelectItem("weapons")
 
     self:SelectCategory("weapons")
@@ -140,7 +150,7 @@ end
 
 function PANEL:Paint(w, h)
     if #self.Categories != 0 then return end
-    PIXEL.DrawSimpleText("NO " .. string.upper(self.Category) .. " FOUND", "F4.NothingFound", w / 2, h / 2 + PIXEL.Scale(45), nothingFoundCol, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+    PIXEL.DrawSimpleText("Aucun objet trouvé.", "F4.NothingFound", w / 2, h / 2 + PIXEL.Scale(45), nothingFoundCol, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 end
 
 vgui.Register("PIXEL.F4.Weapons", PANEL, "PIXEL.F4.ItemPage")

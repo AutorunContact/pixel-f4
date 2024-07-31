@@ -1,3 +1,13 @@
+--[[
+-----------------------------------------------------------
+                    Informations
+-----------------------------------------------------------
+Ce fichier provient du site web https://aide-serveur.fr/ et a été publié par Autorun__.
+Toute republication sur un site autre que https://aide-serveur.fr/ est autorisée uniquement avec l'accord préalable de Discord : autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Le créateur du serveur préconfiguré est Autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Toute revente est strictement interdite, car celui-ci est téléchargeable gratuitement sur https://aide-serveur.fr/.
+-----------------------------------------------------------
+--]]
 
 --[[
     PIXEL F4
@@ -36,7 +46,7 @@ function PANEL:Init()
     playersOnline:AddSegment(nil, onlineAng, PIXEL.F4.Colors.PlayersChartOnline)
     playersOnline:AddSegment(nil, 360 - onlineAng, PIXEL.F4.Colors.PlayersChartOffline)
 
-    local plyTitleTable = {"Players Online", "F4.ChartsName", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
+    local plyTitleTable = {"Joueurs en ligne", "F4.ChartsName", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
     local plySubTitleTable = {plyCount .. "/" .. maxPlys, "F4.ChartsStat", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
 
     function playersOnline:PaintOver(w, h)
@@ -65,7 +75,7 @@ function PANEL:Init()
         local centerX, centerY = w / 2, h / 2
         local diameter = math.min(w, h) - PIXEL.Scale(15)
         PIXEL.DrawCircle(centerX - diameter / 2, centerY - diameter / 2, diameter, diameter, overlayCol)
-        PIXEL.DrawShadowText("Job Distribution", "F4.ChartsName", w / 2, h / 2, PIXEL.F4.Colors.ChartLabel, 1, 1, PIXEL.Scale(2))
+        PIXEL.DrawShadowText("Répartition des emplois", "F4.ChartsName", w / 2, h / 2, PIXEL.F4.Colors.ChartLabel, 1, 1, PIXEL.Scale(2))
     end
 
     table.insert(self.Charts, jobDistribution)
@@ -80,7 +90,7 @@ function PANEL:Init()
         self.CachedCircle = PIXEL.PrecacheArc(centerX, centerY, segRadius, segRadius, 0, 360, 3)
     end
 
-    local moneyTitleTable = {"Total Money", "F4.ChartsName", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
+    local moneyTitleTable = {"Argent total", "F4.ChartsName", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
     local moneySubTitleTable = {PIXEL.FormatMoney(0), "F4.ChartsStat", PIXEL.F4.Colors.ChartLabel, 1, PIXEL.Scale(2)}
 
     local lerp = Lerp

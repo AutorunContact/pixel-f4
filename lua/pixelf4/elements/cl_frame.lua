@@ -1,3 +1,13 @@
+--[[
+-----------------------------------------------------------
+                    Informations
+-----------------------------------------------------------
+Ce fichier provient du site web https://aide-serveur.fr/ et a été publié par Autorun__.
+Toute republication sur un site autre que https://aide-serveur.fr/ est autorisée uniquement avec l'accord préalable de Discord : autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Le créateur du serveur préconfiguré est Autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Toute revente est strictement interdite, car celui-ci est téléchargeable gratuitement sur https://aide-serveur.fr/.
+-----------------------------------------------------------
+--]]
 
 --[[
     PIXEL F4
@@ -31,10 +41,11 @@ function PANEL:Init()
 
     local sidebar = self:CreateSidebar("Dashboard", PIXEL.F4.Config.SidebarLogo, nil, PIXEL.Scale(10), PIXEL.Scale(20))
 
-    sidebar:AddItem("Dashboard", "Dashboard", "dkErdSv", function() self:ChangeTab("PIXEL.F4.Dashboard", "Dashboard") end)
-    sidebar:AddItem("Jobs", "Jobs", "v5e4tGV", function() self:ChangeTab("PIXEL.F4.Jobs", "Jobs") end)
-    sidebar:AddItem("Entities", "Entities", "Be1LD3X", function() self:ChangeTab("PIXEL.F4.Entities", "Entities") end)
-    sidebar:AddItem("Weapons", "Weapons", "tMz2fGT", function() self:ChangeTab("PIXEL.F4.Weapons", "Weapons") end)
+    sidebar:AddItem("Dashboard", "Accueil", "dkErdSv", function() self:ChangeTab("PIXEL.F4.Dashboard", "Dashboard") end)
+    sidebar:AddItem("Jobs", "Emplois", "v5e4tGV", function() self:ChangeTab("PIXEL.F4.Jobs", "Jobs") end)
+    sidebar:AddItem("Entities", "Entités", "Be1LD3X", function() self:ChangeTab("PIXEL.F4.Entities", "Entities") end)
+    sidebar:AddItem("Weapons", "Armes", "tMz2fGT", function() self:ChangeTab("PIXEL.F4.Weapons", "Weapons") end)
+    sidebar:AddItem("Food", "Nourritures", "e65UZ0c", function() self:ChangeTab("PIXEL.F4.Food", "Food") end)
 
     local add = function(idname, imgur, pnl)
         sidebar:AddItem(idname, idname, imgur, function() self:ChangeTab(pnl, id) end)

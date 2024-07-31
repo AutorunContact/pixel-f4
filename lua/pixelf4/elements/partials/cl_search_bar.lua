@@ -1,3 +1,13 @@
+--[[
+-----------------------------------------------------------
+                    Informations
+-----------------------------------------------------------
+Ce fichier provient du site web https://aide-serveur.fr/ et a été publié par Autorun__.
+Toute republication sur un site autre que https://aide-serveur.fr/ est autorisée uniquement avec l'accord préalable de Discord : autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Le créateur du serveur préconfiguré est Autorun__ (Serveur Discord : Discord.gg/GgH8eKmFpt).
+Toute revente est strictement interdite, car celui-ci est téléchargeable gratuitement sur https://aide-serveur.fr/.
+-----------------------------------------------------------
+--]]
 
 --[[
     PIXEL F4
@@ -20,7 +30,7 @@ local PANEL = {}
 
 function PANEL:Init()
     self.Entry = vgui.Create("PIXEL.TextEntry", self)
-    self.Entry:SetPlaceholderText("Search...")
+    self.Entry:SetPlaceholderText("Recherche...")
     self.Entry.IconCol = PIXEL.CopyColor(colors.Icon)
 
     function self.Entry:PaintOver(w, h)
